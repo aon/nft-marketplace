@@ -17,7 +17,7 @@ export default function Home() {
 
   const loadNFTs = async () => {
     // Create generic proider and query for unsold market items
-    const provider = new ethers.providers.JsonRpcProvider();
+    const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com")
     const contract = new ethers.Contract(
       marketplaceAddress,
       NFTMarketplace.abi,
